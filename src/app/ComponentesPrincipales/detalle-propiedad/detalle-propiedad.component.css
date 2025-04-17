@@ -1,0 +1,104 @@
+.cont-muestra {
+    padding: 20px;
+    background-color: #f9f9f9; /* Un fondo suave para destacar la sección */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Una ligera sombra para elevación */
+    margin-bottom: 30px; /* Espacio inferior para separar de otras secciones */
+  }
+  
+  .cont-muestra .titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cont-muestra .titulo h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cont-muestra .cont-txt-img {
+    display: flex;
+    flex-direction: row; /* Imágenes y texto en la misma línea en pantallas grandes */
+    gap: 20px; /* Espacio entre la sección de imágenes y la información */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+  }
+  
+  .cont-muestra .cont-txt-img > div:first-child { /* Contenedor de las imágenes */
+    flex: 1; /* Ocupa más espacio para las imágenes en pantallas grandes */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan si hay muchas */
+    gap: 10px; /* Espacio entre las imágenes */
+    border: 1px solid black;
+    height: auto;
+  }
+  
+  .cont-muestra .cont-txt-img > div:first-child img {
+    width: calc(50% - 5px); /* Dos imágenes por fila en pantallas medianas y grandes */
+    max-height: 200px;
+    object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+    border-radius: 4px;
+  }
+  
+  .cont-muestra .cont-txt-img .info {
+    flex: 1; /* Ocupa espacio restante para la información */
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cont-muestra .cont-txt-img .info div p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .cont-muestra #descripcion {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cont-muestra #descripcion h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .cont-muestra #descripcion p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Media query para pantallas más pequeñas (ej., móviles) */
+  @media (max-width: 768px) {
+    .cont-muestra .cont-txt-img {
+      flex-direction: column; /* Imágenes y texto apilados en móviles */
+    }
+  
+    .cont-muestra .cont-txt-img > div:first-child {
+      flex-direction: row; /* Las imágenes se muestran en fila */
+      overflow-x: auto; /* Permite scroll horizontal si hay muchas imágenes */
+      flex-wrap: nowrap; /* Evita que se envuelvan */
+      padding-bottom: 10px; /* Espacio para el scroll indicator */
+    }
+  
+    .cont-muestra .cont-txt-img > div:first-child img {
+      width: 80%; /* Ocupan más ancho en el scroll horizontal */
+      min-width: 150px; /* Ancho mínimo para cada imagen */
+      max-height: none; /* Permite que la altura se ajuste */
+    }
+  
+    .cont-muestra .cont-txt-img .info {
+      margin-top: 20px; /* Espacio entre imágenes y la info en móviles */
+    }
+  
+    .cont-muestra .titulo h2 {
+      font-size: 2em;
+    }
+  }
