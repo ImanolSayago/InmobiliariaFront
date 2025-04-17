@@ -25,7 +25,8 @@
     <div class="cont-general">
 
         <div>
-            <h3>Ultimas propiedades publicadas</h3>
+            <h3 id="titulo-main">Ultimas propiedades publicadas</h3>
+          
         </div>
 
         <div class="cont-cartas">
@@ -33,31 +34,40 @@
             @for (item of listaPropiedades; track $index) {
                 <div class="carta">
 
+                    
                     <img class="img-carta" [src]="item.imagenPrincipal" alt="">
                     <h4 id="titulo-carta">{{item.titulo}}</h4>
 
                     <div class="cont-detalles">
+                        
                         <div class="detalles">
-                            <img src="" alt="">
+                            <img src="img/puerta.png" alt="">
                             <p>{{item.ambientes}}</p>
                         </div>
     
                         <div class="detalles">
-                            <img src="" alt="">
+                            <img src="img/pueblo.png" alt="">
                             <p>{{item.ciudad}}</p>
                         </div>
     
                         <div class="detalles">
-                            <img src="" alt="">
+                            <img src="img/dolar.png" alt="">
                             <p>{{item.precio}}</p>
                         </div>
 
                     </div>
                     
+                    <div>
+                        <a class="btn-carta" href="">Ver propiedad</a>
+                    </div>
                 </div>
             }
 
         </div>
 
+        <a id="btn-ir" href="">Ver todas las propiedades</a>
+
     </div>
 </main>
+
+<app-footer></app-footer>
