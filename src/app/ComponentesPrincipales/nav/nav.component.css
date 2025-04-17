@@ -37,7 +37,7 @@ nav {
   nav ul li a {
     display: inline-block;
     padding: 10px 15px;
-    font-size: 28px;
+    font-size: 25px;
     margin: 0 10px;
     position: relative;
   }
@@ -73,7 +73,7 @@ nav {
   }
   
   .alist {
-    font-family: "Dancing Script";
+    
     cursor: pointer;
   }
   
