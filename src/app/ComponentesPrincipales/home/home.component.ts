@@ -3,10 +3,11 @@ import { NavComponent } from "../nav/nav.component";
 import { PropiedadesService } from '../../Services/propiedades.service';
 import { Propiedad } from '../../Interfaces/Propiedad';
 import { FooterComponent } from "../footer/footer.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NavComponent, FooterComponent],
+  imports: [NavComponent, FooterComponent,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

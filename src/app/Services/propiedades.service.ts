@@ -16,4 +16,10 @@ export class PropiedadesService {
   const url= `${this.api}/traer`;
     return this.htpp.get<Propiedad[]>(url);
   }
+
+  getPropiedadesByid(id: number):Observable<Propiedad>
+  {
+    const url = `${this.api}/traer/${id}`;
+    return this.htpp.get<Propiedad>(url);
+  }
 }
