@@ -1,6 +1,6 @@
 /* Estilos base (pantalla grande) */
 nav {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,13 +13,13 @@ nav {
   }
   
   nav .logo {
-    font-size: 35px;
+    font-size: 45px;
     font-family: "Dancing Script";
   }
   
   nav a {
     font-size: 22px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
   }
   
@@ -37,7 +37,7 @@ nav {
   nav ul li a {
     display: inline-block;
     padding: 10px 15px;
-    font-size: 22px;
+    font-size: 28px;
     margin: 0 10px;
     position: relative;
   }
@@ -49,7 +49,7 @@ nav {
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     transition: width 0.5s ease;
   }
   
@@ -69,7 +69,7 @@ nav {
   
   .dropdown-menu li a {
     padding: 10px 20px;
-    color: black;
+    color: rgb(255, 255, 255);
   }
   
   .alist {

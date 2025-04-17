@@ -1,0 +1,134 @@
+header {
+    height: 80vh;
+    background-image: url("../home/header3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    align-items: flex-start; /* Alinea horizontalmente al inicio */
+    color: white; /* Texto blanco para mejor contraste con la imagen */
+    position: relative; /* Necesario para posicionar app-nav absolutamente dentro */
+    padding-top: 60px; /* Ajusta este valor según la altura de tu app-nav */
+  }
+  
+  app-nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  header h1 {
+    font-size: 80px;
+    margin-top: 0; /* Elimina el margen superior automático */
+    margin-bottom: 30px; /* Mantiene el margen inferior para separarlo de la info */
+  }
+  
+
+  .info-recepcion {
+    display: flex; /* Alinear los divs de información horizontalmente */
+    gap: 40px; /* Espacio entre los elementos de información */
+    /* Ya no lo empujamos hacia abajo con margin-bottom: auto; */
+  }
+  
+  .info-recepcion > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .info-recepcion h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 237, 223);
+  }
+.cont-general
+{
+    width: 1400px;
+}
+  main div h3{
+    font-size: 25px;
+    text-align: start;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+
+  main .cont-cartas{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  main .cont-general .cont-cartas .carta {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items:center; /* Corrección: align-content para contenedores de una sola línea no tiene efecto en flex-direction: column */
+    justify-content: start;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  
+  main .cont-general .cont-cartas .carta .img-carta {
+    width: 100%; /* La imagen ocupa todo el ancho de la carta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 200px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Recorta o escala la imagen para cubrir el contenedor */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+  }
+  
+  main .cont-general .cont-cartas .carta h4#titulo-carta {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    /* Otros estilos para el título */
+  }
+  
+  main .cont-general .cont-cartas .carta > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  main .cont-general .cont-cartas .carta > div img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px;
+    margin-right: 5px;
+    /* Estilos para los iconos */
+  }
+  
+  main .cont-general .cont-cartas .carta > div p {
+    margin: 0;
+    font-size: 0.9em;
+    /* Estilos para el texto de las características */
+  }
+
+  .cont-detalles
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  .detalles{
+    display: flex;
+    align-items: center;
+  }

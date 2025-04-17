@@ -1,1 +1,63 @@
-<p>home works!</p>
+
+<header>
+    <app-nav></app-nav>
+
+    <div>
+        <h1 class="titulo">Tu camino simple<br>
+        hacia la propiedad perfecta</h1>
+
+        <div class="info-recepcion">
+            <div>
+                <h3>+ 1200
+                Propiedades alquiladas</h3>
+            </div>
+
+            <div>
+                <h3>+ 300 clientes satisfechos</h3>
+            </div>
+         
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="cont-general">
+
+        <div>
+            <h3>Ultimas propiedades publicadas</h3>
+        </div>
+
+        <div class="cont-cartas">
+
+            @for (item of listaPropiedades; track $index) {
+                <div class="carta">
+
+                    <img class="img-carta" [src]="item.imagenPrincipal" alt="">
+                    <h4 id="titulo-carta">{{item.titulo}}</h4>
+
+                    <div class="cont-detalles">
+                        <div class="detalles">
+                            <img src="" alt="">
+                            <p>{{item.ambientes}}</p>
+                        </div>
+    
+                        <div class="detalles">
+                            <img src="" alt="">
+                            <p>{{item.ciudad}}</p>
+                        </div>
+    
+                        <div class="detalles">
+                            <img src="" alt="">
+                            <p>{{item.precio}}</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            }
+
+        </div>
+
+    </div>
+</main>
