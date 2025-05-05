@@ -1,0 +1,128 @@
+.cont-cartas .carta {
+    box-shadow: 0px 0px 5px #a7ccee;
+    display: flex;
+    background-color: #eff0f0;
+    flex-direction: column;
+    align-items:center; /* Corrección: align-content para contenedores de una sola línea no tiene efecto en flex-direction: column */
+    justify-content: start;
+    max-width: 400px; /* que no pase de eso, pero que se adapte */
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+   
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para la transformación y la sombra */
+  }
+
+ .cont-cartas .carta:hover{
+    transform: translateY(-10px); /* Eleva la carta 5 píxeles hacia arriba */
+    
+  }
+  
+ .cont-cartas .carta .img-carta {
+    width: 100%; /* La imagen ocupa todo el ancho de la carta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 200px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Recorta o escala la imagen para cubrir el contenedor */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+  }
+  
+  .cont-cartas .carta h4#titulo-carta {
+    font-size: 1.3em;
+    margin-top: 5px;
+    color: rgb(51, 51, 51);
+    
+    /* Otros estilos para el título */
+  }
+  
+ .cont-cartas .carta > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .cont-cartas .carta > div img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px;
+    margin-right: 5px;
+    /* Estilos para los iconos */
+  }
+  
+  .cont-cartas .carta > div p {
+    margin: 0;
+    font-size: 0.9em;
+    /* Estilos para el texto de las características */
+  }
+
+  .cont-detalles
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  .detalles{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .btn-carta{
+    font-size: 18px;
+    padding: 7px;
+
+    color: white;
+    background-color: #68aae7;
+  margin-top: 10px;
+  }
+
+  .cont-cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center; 
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #titulo{
+    font-size: 40px;
+    color: rgb(51, 51, 51);
+  }
+
+  .filtrar {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column; /* 👈 esto es clave */
+    align-items: center;     /* centra en eje horizontal */
+    gap: 20px;               /* espacio entre título y filtros */
+    padding: 20px;
+  }
+  .comp-filtrar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* opcional, para que se acomoden bien si hay poco espacio */
+    gap: 10px;       /* espacio entre inputs */
+  }
+
+  .filtrar .comp-filtrar input{
+    margin: 5px;
+  }
+  .filtrar div .btn-filtro {
+    font-size: 18px;
+    padding: 7px;
+    color: white;
+    border: none;
+    background-color: #68aae7;
+    transition: background-color 0.3s ease; /* 👈 transición suave */
+  }
+
+  .filtrar div .btn-filtro:hover{
+    background-color: #3e96e7;
+    cursor: pointer;
+  }

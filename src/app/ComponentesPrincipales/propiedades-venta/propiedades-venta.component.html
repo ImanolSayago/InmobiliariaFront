@@ -1,0 +1,60 @@
+<app-nav></app-nav>
+
+<section class="filtrar">
+    <h1 id="titulo">Propiedades en venta</h1>
+
+    <div class="comp-filtrar">
+        <input type="text" placeholder="Dirección o altura" [(ngModel)]="filtroDireccion" (input)="aplicarFiltros()">
+        <input type="number" placeholder="Ambientes" [(ngModel)]="filtroAmbientes" (input)="aplicarFiltros()">
+        <input type="number" placeholder="Baños" [(ngModel)]="filtroBanos" (input)="aplicarFiltros()">
+        <input type="number" placeholder="Cocheras" [(ngModel)]="filtroCocheras" (input)="aplicarFiltros()">
+
+        <div>
+            <button class="btn-filtro" (click)="limpiarFiltros()">Borrar filtros</button>
+        </div>
+    </div>
+
+</section>
+
+<main>
+
+    <div class="cont-cartas">
+
+        @for (item of listaPropiedadFiltrada; track $index) {
+            <div class="carta">
+
+                
+                <img class="img-carta" [src]="item.imagenPrincipal" alt="">
+                <h4 id="titulo-carta">{{item.titulo}}</h4>
+
+                <div class="cont-detalles">
+                    
+                    <div class="detalles">
+                        <img src="img/puerta.png" alt="">
+                        <p>{{item.ambientes}}</p>
+                    </div>
+
+                    <div class="detalles">
+                        <img src="img/pueblo.png" alt="">
+                        <p>{{item.ciudad}}</p>
+                    </div>
+
+                    <div class="detalles">
+                        <img src="img/dolar.png" alt="">
+                        <p>{{item.precio}}</p>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <a class="btn-carta" [routerLink]="['/propiedad/', item.id]" href="">Ver propiedad</a>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</main>
+
+
+<app-footer></app-footer>

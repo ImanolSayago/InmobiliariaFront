@@ -1,248 +1,288 @@
 header {
-    height: 80vh;
-    background-image: url("../home/header3.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente los elementos hijos */
-    align-items: flex-start; /* Alinea horizontalmente al inicio */
-    color: white; /* Texto blanco para mejor contraste con la imagen */
-    position: relative; /* Necesario para posicionar app-nav absolutamente dentro */
-    padding-top: 60px; /* Ajusta este valor según la altura de tu app-nav */
-  }
-  
-  app-nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-  
-  header h1 {
-    font-size: 70px;
-    margin-top: 0; /* Elimina el margen superior automático */
-   
-    margin-bottom: 30px; /* Mantiene el margen inferior para separarlo de la info */
-  }
-  
+  height: 80vh;
+  background-image: url("../home/header3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente los elementos hijos */
+  align-items: flex-start; /* Alinea horizontalmente al inicio */
+  color: white; /* Texto blanco para mejor contraste con la imagen */
+  position: relative; /* Necesario para posicionar app-nav absolutamente dentro */
+  padding-top: 60px; /* Ajusta este valor según la altura de tu app-nav */
+}
 
-  .info-recepcion {
-    display: flex; /* Alinear los divs de información horizontalmente */
-    gap: 40px; /* Espacio entre los elementos de información */
-    /* Ya no lo empujamos hacia abajo con margin-bottom: auto; */
-    
-  }
-  
-  .info-recepcion > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .info-recepcion h3 {
-    font-size: 1.6em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    text-align: center;
-  }
+app-nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 
-  main{
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-   
-  }
+header h1 {
+  font-size: 70px;
+  margin-top: 0; /* Elimina el margen superior automático */
+ 
+  margin-bottom: 30px; /* Mantiene el margen inferior para separarlo de la info */
+}
+
+
+.info-recepcion {
+  display: flex; /* Alinear los divs de información horizontalmente */
+  gap: 40px; /* Espacio entre los elementos de información */
+  /* Ya no lo empujamos hacia abajo con margin-bottom: auto; */
+  
+}
+
+.info-recepcion > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.info-recepcion h3 {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+main{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+ 
+}
 .cont-general
 {
-    width: 1400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  #titulo-main {
-    font-size: 28px;
-    text-align: start;
-    margin-top: 100px;
-    color: rgb(51, 51, 51);
-    margin-bottom: 10px;
-  }
+#titulo-main {
+  font-size: 28px;
+  text-align: start;
+  margin-top: 100px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 10px;
+}
 
-  main .cont-cartas{
-    width: 100%;
+main .cont-cartas{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .cont-general .cont-cartas .carta {
+  box-shadow: 0px 0px 5px #a7ccee;
+  display: flex;
+  background-color: #eff0f0;
+  flex-direction: column;
+  align-items:center; /* Corrección: align-content para contenedores de una sola línea no tiene efecto en flex-direction: column */
+  justify-content: start;
+  width: 300px;
+  min-height: 300px;
+  height: auto;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para la transformación y la sombra */
+}
+
+main .cont-general .cont-cartas .carta:hover{
+  transform: translateY(-10px); /* Eleva la carta 5 píxeles hacia arriba */
   
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+}
 
-  main .cont-general .cont-cartas .carta {
-    box-shadow: 0px 0px 5px #a7ccee;
-    display: flex;
-    background-color: #eff0f0;
-    flex-direction: column;
-    align-items:center; /* Corrección: align-content para contenedores de una sola línea no tiene efecto en flex-direction: column */
-    justify-content: start;
-    width: 400px;
-    min-height: 300px;
+main .cont-general .cont-cartas .carta .img-carta {
+  width: 100%; /* La imagen ocupa todo el ancho de la carta */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 200px; /* Limita la altura máxima de la imagen */
+  object-fit: cover; /* Recorta o escala la imagen para cubrir el contenedor */
+  margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+main .cont-general .cont-cartas .carta h4#titulo-carta {
+  font-size: 1.3em;
+  margin-top: 5px;
+  color: rgb(51, 51, 51);
+  
+  /* Otros estilos para el título */
+}
+
+main .cont-general .cont-cartas .carta > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+main .cont-general .cont-cartas .carta > div img {
+  width: 20px; /* Ajusta el tamaño del icono */
+  height: 20px;
+  margin-right: 5px;
+  /* Estilos para los iconos */
+}
+
+main .cont-general .cont-cartas .carta > div p {
+  margin: 0;
+  font-size: 0.9em;
+  /* Estilos para el texto de las características */
+}
+
+.cont-detalles
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.detalles{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.btn-carta{
+  font-size: 18px;
+  padding: 7px;
+  color: white;
+  background-color: #68aae7;
+margin-top: 10px;
+}
+
+#btn-ir{
+  display: inline-block;
+  margin: 30px auto 60px auto; 
+  text-align: center;
+  font-size: 27px;
+  padding: 7px;
+  color: white;
+  background-color: #68aae7;
+}
+
+#nosotros{
+  background: linear-gradient(to bottom, white 50%, #a7ccee 50%);
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#nosotros .cont-nosotros{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 1px black;
+  width: 90%;
+  height: 600px;
+  background-color: #eff0f0;
+}
+
+#nosotros .cont-nosotros .cont-texto-ns{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  border-end-end-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 30px;
+ 
+}
+
+#nosotros .cont-nosotros .cont-texto-ns h3{
+  color: rgb(51, 51, 51);
+  font-size: 55px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+#nosotros .cont-nosotros .cont-texto-ns p
+{
+  color: rgb(51, 51, 51);
+  font-size: 30px;
+}
+
+
+
+#img-ns
+{
+  
+  width: 600px;
+  height: 300px;
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  
+
+  #nosotros .cont-nosotros .cont-texto-ns{
     height: auto;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para la transformación y la sombra */
-  }
-
-  main .cont-general .cont-cartas .carta:hover{
-    transform: translateY(-10px); /* Eleva la carta 5 píxeles hacia arriba */
     
-  }
-  
-  main .cont-general .cont-cartas .carta .img-carta {
-    width: 100%; /* La imagen ocupa todo el ancho de la carta */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 200px; /* Limita la altura máxima de la imagen */
-    object-fit: cover; /* Recorta o escala la imagen para cubrir el contenedor */
-    margin-bottom: 10px; /* Espacio entre la imagen y el título */
-  }
-  
-  main .cont-general .cont-cartas .carta h4#titulo-carta {
-    font-size: 1.3em;
-    margin-top: 5px;
-    color: rgb(51, 51, 51);
-    
-    /* Otros estilos para el título */
-  }
-  
-  main .cont-general .cont-cartas .carta > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  main .cont-general .cont-cartas .carta > div img {
-    width: 20px; /* Ajusta el tamaño del icono */
-    height: 20px;
-    margin-right: 5px;
-    /* Estilos para los iconos */
-  }
-  
-  main .cont-general .cont-cartas .carta > div p {
-    margin: 0;
-    font-size: 0.9em;
-    /* Estilos para el texto de las características */
-  }
-
-  .cont-detalles
-  {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-  }
-  .detalles{
-    display: flex;
-    align-items: center;
-    margin-top: 60px;
-  }
-
-  .btn-carta{
-    font-size: 18px;
-    padding: 7px;
-
-    color: white;
-    background-color: #68aae7;
-  margin-top: 10px;
-  }
-
-  #btn-ir{
-    display: inline-block;
-    margin: 30px auto 60px auto; 
-    text-align: center;
-    font-size: 27px;
-    padding: 7px;
-    color: white;
-    background-color: #68aae7;
-  }
-
-  #nosotros{
-    background: linear-gradient(to bottom, white 50%, #a7ccee 50%);
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
   }
 
   #nosotros .cont-nosotros{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0px 0px 1px black;
-    width: 90%;
-    height: auto;
-    background-color: #eff0f0;
-  }
-
-  #nosotros .cont-nosotros .cont-texto-ns{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 50%;
-    border-end-end-radius: 20px;
-    border-top-right-radius: 20px;
-    margin: 30px;
-   
+    height: 100%;
+   margin-bottom: 100px;
   }
 
   #nosotros .cont-nosotros .cont-texto-ns h3{
     color: rgb(51, 51, 51);
-    font-size: 55px;
+    font-size: 45px;
     margin-bottom: 20px;
   }
 
   #nosotros .cont-nosotros .cont-texto-ns p
   {
     color: rgb(51, 51, 51);
-    font-size: 30px;
+    font-size: 25px;
   }
 
-
-
-  #img-ns
-  {
-    
-    width: 600px;
-    height: 300px;
+  header h1{
+    color: rgb(51, 51, 51);
   }
 
-
-
-
-
-  @media (max-width: 768px) {
-
-    main{
-      margin-bottom: 1300px;
-    }
-    .cont-cartas {
-      flex-direction: column; /* 🔥 cartas una abajo de la otra */
-      align-items: center; /* Centra las cartas */
-    }
-  
-    .carta {
-      width: 90%; /* Que no ocupe todo el ancho, queda más prolijo */
-      height: auto; /* Por si el contenido varía */
-    }
-  
-    .cont-general {
-      width: 100%;
-      padding: 0 10px;
-    }
+  header div .info-recepcion div h3{
+    color:rgb(51, 51, 51);
   }
+
+  main{
+    margin-bottom: 350px;
+  }
+
+  main .cont-general .cont-cartas .carta{
+  width:320px;
+  }
+}
+
+
+@media (max-width: 769px) {
+
+  main{
+    margin-bottom: 1300px;
+  }
+  .cont-cartas {
+    flex-direction: column; /* 🔥 cartas una abajo de la otra */
+    align-items: center; /* Centra las cartas */
+  }
+
+  .carta {
+    width: 90%; /* Que no ocupe todo el ancho, queda más prolijo */
+    height: auto; /* Por si el contenido varía */
+  }
+
+  .cont-general {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

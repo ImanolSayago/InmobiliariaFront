@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
+
+  rutas = inject(Router);
   isDropdownOpen = false;
   isMenuOpen = false;
   toggleDropdown() {
@@ -15,6 +18,16 @@ export class NavComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  irPropiedadesAlquiler()
+  {
+    this.rutas.navigate(["alquiler"])
+  }
+
+  irVentas()
+  {
+    this.rutas.navigate(["venta"])
   }
   
 }

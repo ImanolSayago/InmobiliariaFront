@@ -1,30 +1,40 @@
 .cont-muestra {
     padding: 20px;
-    background-color: #f9f9f9; /* Un fondo suave para destacar la sección */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Una ligera sombra para elevación */
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    
     margin-bottom: 30px; /* Espacio inferior para separar de otras secciones */
   }
   
-  .cont-muestra .titulo {
+.titulo {
+  background-color: rgb(235, 235, 235);
+  margin-top: 50px;
     text-align: center;
+    font-size: 30px;
     margin-bottom: 20px;
+   color: #333;
   }
   
   .cont-muestra .titulo h2 {
     font-size: 2.5em;
-    color: #333;
+    color: rgb(51, 51, 51);
     margin-bottom: 10px;
   }
   
   .cont-muestra .cont-txt-img {
     display: flex;
+
     flex-direction: row; /* Imágenes y texto en la misma línea en pantallas grandes */
     gap: 20px; /* Espacio entre la sección de imágenes y la información */
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    align-items: center; /* Alinea los elementos al inicio verticalmente */
+    justify-content: space-around;
   }
   
-  .cont-muestra .cont-txt-img > div:first-child { /* Contenedor de las imágenes */
+  .cont-muestra .cont-txt-img > div:first-child { 
+    /* Contenedor de las imágenes */
     flex: 1; /* Ocupa más espacio para las imágenes en pantallas grandes */
     display: flex;
     flex-wrap: wrap; /* Permite que las imágenes se envuelvan si hay muchas */
@@ -40,42 +50,172 @@
     border-radius: 4px;
   }
   
-  .cont-muestra .cont-txt-img .info {
-    flex: 1; /* Ocupa espacio restante para la información */
-    padding: 15px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+
+  .cont-muestra .cont-txt-img  .contacto{
+    flex: 1;
+
   }
-  
+
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2{
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-size: 27px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btnform {
+  width: 100%;
+  padding: 10px;
+  background-color: #68aae7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnform:hover {
+  background-color: #8ac5fd;
+}
+
   .cont-muestra .cont-txt-img .info div p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 8px;
-  }
-  
-  .cont-muestra #descripcion {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .cont-muestra #descripcion h4 {
-    font-size: 1.5em;
+    font-size: 1.35em;
     color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    margin-bottom: 18px;
+  }
+
+  .info-propiedad {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #f2f2f2;
+    padding: 30px;
+    flex-wrap: wrap;
   }
   
-  .cont-muestra #descripcion p {
-    color: #666;
-    line-height: 1.6;
+  .info,
+  #descripcion {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
   
-  /* Media query para pantallas más pequeñas (ej., móviles) */
+  .info h3,
+  #descripcion h4 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .info p,
+  #descripcion p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .cont-muestra .cont-txt-img .galeria-contenedor {
+    
+    flex: 1;
+    position: relative; /* Para posicionar las flechas relativamente a este contenedor */
+    display: flex;
+    justify-content: center; /* Centra la imagen inicialmente */
+    align-items: center;
+    border: 1px solid black;
+    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    height: auto; /* Ajusta la altura según la imagen */
+    max-height: 800px; /* Opcional: establece una altura máxima */
+    width: 1300px;
+}
+
+.cont-muestra .cont-txt-img .galeria-contenedor .imagen-galeria {
+  
+  width: 100%; /* Asegura que la imagen intente ocupar todo el ancho del contenedor */
+  height: 100%; /* Asegura que la imagen intente ocupar toda la altura del contenedor */
+  object-fit:cover; /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
+  transition: opacity 0.3s ease-in-out;
+  
+}
+
+.cont-muestra .cont-txt-img .galeria-contenedor .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    z-index: 10; /* Asegura que las flechas estén por encima de la imagen */
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cont-muestra .cont-txt-img .galeria-contenedor .flecha:hover {
+    opacity: 1;
+}
+
+.cont-muestra .cont-txt-img .galeria-contenedor .flecha.izquierda {
+    left: 10px;
+}
+
+.cont-muestra .cont-txt-img .galeria-contenedor .flecha.derecha {
+    right: 10px;
+}
+
+.cont-muestra .cont-txt-img > div:first-child {
+    
+    display: block;
+    border: none;
+    height: auto;
+}
+
+.cont-muestra .cont-txt-img > div:first-child img {
+   
+    width: auto;
+    max-height: none;
+    object-fit: initial;
+    border-radius: 0;
+}
+  
+ 
   @media (max-width: 768px) {
     .cont-muestra .cont-txt-img {
       flex-direction: column; /* Imágenes y texto apilados en móviles */

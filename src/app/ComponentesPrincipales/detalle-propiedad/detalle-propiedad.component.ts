@@ -8,12 +8,13 @@ import { NavComponent } from "../nav/nav.component";
 
 @Component({
   selector: 'app-detalle-propiedad',
-  imports: [NavComponent],
+  imports: [NavComponent, FooterComponent],
   templateUrl: './detalle-propiedad.component.html',
   styleUrl: './detalle-propiedad.component.css'
 })
 export class DetallePropiedadComponent implements OnInit{
 
+  indiceImagenActual: number = 0;
 
   propiedad:Propiedad ={
     id: 0,
@@ -27,8 +28,22 @@ export class DetallePropiedadComponent implements OnInit{
     banos: 0,
     precio: 0,
     disponible: true,
+    tipo:0,
+    cocheras:0,
     FechaPublicacion: new Date(""),
     listaImg: []
+  }
+
+  anteriorImagen(): void {
+    if (this.indiceImagenActual > 0) {
+      this.indiceImagenActual--;
+    }
+  }
+
+  siguienteImagen(): void {
+    if (this.indiceImagenActual < this.propiedad.listaImg.length - 1) {
+      this.indiceImagenActual++;
+    }
   }
 
   proyectoID:number=0;
@@ -41,6 +56,7 @@ export class DetallePropiedadComponent implements OnInit{
           filter((event): event is NavigationEnd => event instanceof NavigationEnd)
         ).subscribe(() => {
           window.scrollTo(0, 0); // Restablecer el scroll al inicio
+          console.log(this.propiedad.listaImg);
         });
 
     this.route.paramMap.subscribe(params => {
@@ -60,4 +76,6 @@ export class DetallePropiedadComponent implements OnInit{
       })
   }
   )}
+
+
 }

@@ -3,7 +3,7 @@ import { NavComponent } from "../nav/nav.component";
 import { PropiedadesService } from '../../Services/propiedades.service';
 import { Propiedad } from '../../Interfaces/Propiedad';
 import { FooterComponent } from "../footer/footer.component";
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit{
     this.traerPropiedades();
   }
 
+listaPropiedades3:Propiedad[]=[];
   listaPropiedades: Propiedad[] =[];
   servicePropiedades = inject(PropiedadesService);
 
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit{
       {
         this.listaPropiedades=ListaPR;
         console.log(this.listaPropiedades[0].ambientes)
+        this.filtrarMx3();
          
       },
       error:(Err:Error)=>
@@ -34,5 +36,16 @@ export class HomeComponent implements OnInit{
       }
     })
   }
+
+  filtrarMx3()
+  {
+    var i =0;
+    while(i<=3)
+    {
+      this.listaPropiedades3[i]= this.listaPropiedades[i];
+      i++;
+    }
+  }
+ 
 
 }
